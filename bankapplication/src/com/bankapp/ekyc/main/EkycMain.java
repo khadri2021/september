@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 import com.bankapp.ekyc.aadhar.AadharGeneration;
+import com.bankapp.ekyc.constants.EkycConstants;
 
 public class EkycMain {
 	public static void main(String[] args) throws IOException {
@@ -14,7 +15,7 @@ public class EkycMain {
 		StringBuilder adhaarNumber = AadharGeneration.getAdhaarNumber();
 		System.out.println(adhaarNumber.toString());
 		adhaarNumber.append(".txt");
-		File f = new File("C:\\bankapplication\\ekyc_registration", adhaarNumber.toString());
+		File f = new File(EkycConstants.EKYC_PATH, adhaarNumber.toString());
 
 		f.createNewFile();
 		EkycGeneration(f);
