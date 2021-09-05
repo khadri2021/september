@@ -14,7 +14,7 @@ public class EkycMain {
 		StringBuilder adhaarNumber = AadharGeneration.getAdhaarNumber();
 		System.out.println(adhaarNumber.toString());
 		adhaarNumber.append(".txt");
-		File f = new File("F:\\harshini\\work\\Task\\ekyc_registration", adhaarNumber.toString());
+		File f = new File("C:\\bankapplication\\ekyc_registration", adhaarNumber.toString());
 
 		f.createNewFile();
 		EkycGeneration(f);
@@ -114,7 +114,7 @@ public class EkycMain {
 
 		for (int i = 0; i < arr.length; i++) {
 
-			builder.append(arr[i] + " ");
+			builder.append(arr[i] + "-");
 
 		}
 		return builder;
