@@ -25,7 +25,7 @@ public class Input {
 			try {
 				readFile.readFile(accountNumber);
 			} catch (Exception e) {
-				e.printStackTrace();
+				System.out.println(e.getMessage());
 			}
 		
 	}
