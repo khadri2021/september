@@ -19,7 +19,8 @@ public class WriteFile {
 				pw.println();
 				pw.close();
 			} catch (IOException e) {
-				e.printStackTrace();
+				//e.printStackTrace();
+				System.out.println("Unable to write into file");
 			}
 		}
 

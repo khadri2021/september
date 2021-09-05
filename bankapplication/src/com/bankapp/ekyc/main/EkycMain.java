@@ -19,7 +19,7 @@ public class EkycMain {
 
 		f.createNewFile();
 		EkycGeneration(f);
-	
+
 	}
 
 	public static void EkycGeneration(File f) throws FileNotFoundException {

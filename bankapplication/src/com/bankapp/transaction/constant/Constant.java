@@ -1,7 +1,7 @@
 package com.bankapp.transaction.constant;
 
 public class Constant {
-	public static final String filepath = "C:\\Users\\Teja Vardhan\\Desktop\\TASK\\java\\BankTask\\bankapp\\";
+	public static final String filepath = "C:\\bankapplication\\account\\";
 	public static final String extenstion = ".txt";
 	public static final String ACF002 = "ACF002";
 	public static final String BKN01 = "BKN01";
