@@ -10,9 +10,9 @@ public class Input {
 
 	private Scanner sc;
 
-	public static void main(String[] args) {
-		new Input().inputValues();
-	}
+//	public static void main(String[] args) {
+//		new Input().inputValues();
+//	}
 
 	public void inputValues() {
 		sc = new Scanner(System.in);
