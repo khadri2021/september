@@ -1,5 +1,9 @@
 package com.bankapp.transaction.details;
 
+/**
+ * @author Teja Vardhan
+ *
+ */
 public class BasicDetails {
 
 	private String accountNumber;

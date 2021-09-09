@@ -10,6 +10,10 @@ import com.bankapp.transaction.constant.Messages;
 import com.bankapp.transaction.details.BasicDetails;
 import com.bankapp.transaction.matcher.FindMatcher;
 
+/**
+ * @author Teja Vardhan
+ *
+ */
 public class ReadFile {
 
 	Scanner myReader;
@@ -33,7 +37,7 @@ public class ReadFile {
 					items[1] = split[Constant.ONE];
 				} else if (name.equals(Constant.BALANCE)) {
 					items[2] = split[Constant.ONE];
-				} 
+				}
 			}
 
 			br.close();

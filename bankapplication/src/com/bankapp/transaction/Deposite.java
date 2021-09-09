@@ -7,6 +7,10 @@ import com.bankapp.transaction.constant.Messages;
 import com.bankapp.transaction.details.BasicDetails;
 import com.bankapp.transaction.file.operation.WriteFile;
 
+/**
+ * @author Teja Vardhan
+ *
+ */
 public class Deposite {
 	Scanner sc = new Scanner(System.in);
 	int money;

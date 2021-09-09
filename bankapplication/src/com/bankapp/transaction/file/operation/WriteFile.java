@@ -5,6 +5,10 @@ import java.io.PrintWriter;
 
 import com.bankapp.transaction.constant.Constant;
 
+/**
+ * @author Teja Vardhan
+ *
+ */
 public class WriteFile {
 
 		public void writeIntoFile(String accountNumber,String balance,String pin) {
