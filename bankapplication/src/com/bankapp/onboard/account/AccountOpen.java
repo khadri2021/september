@@ -35,6 +35,7 @@ public class AccountOpen {
 			bufferedWriter.write(Constant.BALANCE + "=" + minimBalance + "\n");
 			bufferedWriter.write(Constant.ADHAARNO + "=" + aadhar + "\n");
 			bufferedWriter.close();
+			System.out.println("Sucessfully add balance to your account");
 		} else {
 			AccountOpen accountOpen = new AccountOpen();
 			accountOpen.createAccountFile();
