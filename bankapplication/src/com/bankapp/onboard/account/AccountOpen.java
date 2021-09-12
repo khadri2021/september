@@ -1,59 +1,51 @@
 package com.bankapp.onboard.account;
 
-import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Objects;
-import java.util.UUID;
 
 import com.bankapp.onboard.validation.CustomerMinimumBalance;
 import com.bankapp.onboard.validation.EkycService;
+import com.bankapp.transaction.constant.Constant;
 
+/**
+ * @author Teja Vardhan
+ *
+ */
 public class AccountOpen {
-	private static final int Minbalance = 0;
+	public void createAccountFile() throws IOException {
+		String readerkyc = EkycService.checkE_kyc();
 
-	public static void main(String[] args) throws IOException {
-		EkycService e = new EkycService();
-		BufferedReader readerkyc = EkycService.checkE_kyc();
-		if (Objects.nonNull(readerkyc)) {
-			System.out.println(readerkyc.readLine());
-			String contentLine = readerkyc.readLine();
-			while (contentLine != null) {
-				System.out.println(contentLine);
-				contentLine = readerkyc.readLine();
-				createAccountFile();
-				CustomerMinimumBalance balance = new CustomerMinimumBalance();
-				minimumBalance();
-			}
-		}
-	}
-
-	public static void createAccountFile() throws IOException {
+		String aadhar = readerkyc;
 		String accountNumber = getAccountNumber();
-		System.out.println(accountNumber);
+		File f = new File(Constant.filepath + accountNumber + Constant.extenstion);
 
-		StringBuilder sb = new StringBuilder(accountNumber);
-		sb.append(".txt");
-		File f = new File("D:\\Task\\suhasini\\onboarding", sb.toString());
-		f.createNewFile();
+		if (!f.exists()) {
+			f.createNewFile();
+			String pin = accountNumber.substring(5, 9);
+			System.out.println("Your Account Number : " + accountNumber);
+			CustomerMinimumBalance cmb = new CustomerMinimumBalance();
+			int minimBalance = cmb.customerMinimumBalance();
+
+			BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f, true));
+
+			bufferedWriter.write(Constant.ACCOUNT_NUMBER + "=" + accountNumber + "\n");
+			bufferedWriter.write(Constant.PIN + "=" + pin + "\n");
+			bufferedWriter.write(Constant.BALANCE + "=" + minimBalance + "\n");
+			bufferedWriter.write(Constant.ADHAARNO + "=" + aadhar + "\n");
+			bufferedWriter.close();
+		} else {
+			AccountOpen accountOpen = new AccountOpen();
+			accountOpen.createAccountFile();
+		}
 	}
 
 	private static String getAccountNumber() {
-		String uuid = UUID.randomUUID().toString().replace("-", "");
-		String accNumber = uuid.substring(0, 11).toUpperCase();
+		long random = (long) (Math.random() * 1000000000 * 1000000000);
+		String uuid = Long.toString(random);
+		String accNumber = uuid.substring(0, 12);
 		return accNumber;
 	}
 
-	public static void minimumBalance() {
-		int MIN_BALANCE = 500;
-		if (Minbalance >= MIN_BALANCE) {
-			if (Minbalance >= MIN_BALANCE) {
-				System.out.println("create account");
-			} else {
-				System.out.println("please enter required ammount! retry it ");
-			}
-
-		}
-
-	}
 }

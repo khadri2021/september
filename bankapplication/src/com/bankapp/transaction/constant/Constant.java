@@ -21,5 +21,6 @@ public class Constant {
 	public static final String MW001 = "MW001";
 	public static final String DEPTMSG = "DEPTMSG";
 	public static final String RERROR = "RERROR";
+	public static final String ADHAARNO  = "ADHAARNO";
 	public static final int ARRAYLENGTH = 20;
 }

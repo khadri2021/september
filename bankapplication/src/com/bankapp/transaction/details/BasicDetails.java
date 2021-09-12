@@ -9,6 +9,16 @@ public class BasicDetails {
 	private String accountNumber;
 	private String balance;
 	private String pin;
+	private String aadharNumber;
+	
+
+	public String getAadharNumber() {
+		return aadharNumber;
+	}
+
+	public void setAadharNumber(String aadharNumber) {
+		this.aadharNumber = aadharNumber;
+	}
 
 	public String getAccountNumber() {
 		return accountNumber;

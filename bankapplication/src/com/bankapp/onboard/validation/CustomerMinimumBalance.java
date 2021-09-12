@@ -6,15 +6,16 @@ import java.util.Scanner;
 public class CustomerMinimumBalance {
 	public static final int MIN_BALANCE = 500;
 
-	public static void main(String[] args) {
+	public int customerMinimumBalance() {
 
-		Scanner s = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		System.out.println("deposit minimum  balance");
-		int Minbalance = s.nextInt();
+		int Minbalance = sc.nextInt();
 		if (Minbalance >= MIN_BALANCE) {
-			System.out.println("create account");
+			return Minbalance;
 		} else {
 			System.out.println("please enter required ammount! retry it ");
 		}
+		return 0;
 	}
 }

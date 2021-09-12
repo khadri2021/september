@@ -19,7 +19,7 @@ public class Input {
 		sc = new Scanner(System.in);
 		System.out.println(Messages.MessagesCode(Constant.BKN01));
 
-		String accountNumber = sc.next();	
+		String accountNumber = sc.next();
 
 		ReadFile readFile = new ReadFile();
 		try {

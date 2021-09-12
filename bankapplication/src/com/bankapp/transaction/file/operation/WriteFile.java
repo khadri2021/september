@@ -11,7 +11,7 @@ import com.bankapp.transaction.constant.Constant;
  */
 public class WriteFile {
 
-		public void writeIntoFile(String accountNumber,String balance,String pin) {
+		public void writeIntoFile(String accountNumber,String balance,String pin, String aadharNumber) {
 			try {
 				PrintWriter pw = new PrintWriter(
 						Constant.filepath + accountNumber + Constant.extenstion);
@@ -21,9 +21,10 @@ public class WriteFile {
 				pw.println();
 				pw.write(Constant.BALANCE+"="+balance);
 				pw.println();
+				pw.write(Constant.ADHAARNO+"="+aadharNumber);
+				pw.println();
 				pw.close();
 			} catch (IOException e) {
-				//e.printStackTrace();
 				System.out.println("Unable to write into file");
 			}
 		}

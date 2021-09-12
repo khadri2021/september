@@ -1,5 +1,6 @@
 package com.bankapp.transaction.matcher;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.bankapp.transaction.Deposite;
@@ -14,10 +15,12 @@ public class FindMatcher {
 	BasicDetails bd = new BasicDetails();
 	Scanner sc = new Scanner(System.in);
 
-	public void getItem(String[] items) {
-		bd.setAccountNumber(items[0]);
-		bd.setPin(items[1]);
-		bd.setBalance(items[2]);
+	public void getItem(ArrayList<String> arrayList) {
+
+		bd.setAccountNumber((String) arrayList.get(0));
+		bd.setPin((String) arrayList.get(1));
+		bd.setBalance((String) arrayList.get(2));
+		bd.setAadharNumber((String) arrayList.get(3));
 
 		System.out.println("Enter Transication you want to do : ");
 		System.out.println("1 Deposite\n2 WithDraw");

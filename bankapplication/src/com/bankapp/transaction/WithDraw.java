@@ -28,7 +28,7 @@ public class WithDraw {
 				bd.setBalance(Integer.toString(remaing_money));
 				System.out.println(Messages.MessagesCode(Constant.ALBAL) + remaing_money);
 				System.out.println("Transaction successful");
-				new WriteFile().writeIntoFile(bd.getAccountNumber(),bd.getBalance(),bd.getPin());
+				new WriteFile().writeIntoFile(bd.getAccountNumber(),bd.getBalance(),bd.getPin(),bd.getAadharNumber());
 
 			}
 		} else {

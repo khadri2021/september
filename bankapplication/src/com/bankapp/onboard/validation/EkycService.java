@@ -6,22 +6,41 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
+import com.bankapp.ekyc.constants.EkycConstants;
+import com.bankapp.transaction.constant.Constant;
+
+/**
+ * @author Teja Vardhan
+ *
+ */
 public class EkycService {
-	public static BufferedReader checkE_kyc() throws IOException {
-		Scanner sc = new Scanner(System.in);
+	private static Scanner sc;
+
+	public static String checkE_kyc() throws IOException {
+		String aadharNo = null;
+		sc = new Scanner(System.in);
 		System.out.println("Enter AdharNumber");
-		String aadhrNumber = sc.next();
-		StringBuilder sb = new StringBuilder(aadhrNumber);
-		sb.append(".txt");
-		File f = new File("D:\\Task\\suhasini\\ekyc_registation", sb.toString());
+		String aadharNumber = sc.next();
+
+		File f = new File(EkycConstants.EKYC_PATH + aadharNumber + Constant.extenstion);
 		if (f.exists()) {
-			System.out.println("#### WELCOME TO ON BOARDING");
-			BufferedReader br=new BufferedReader(new FileReader(f));
-			System.out.println(br.readLine());
-			return br;
+
+			System.out.println("Congrats Ekyc Completed");
+			BufferedReader br = new BufferedReader(new FileReader(f));
+			String line;
+			String Separater = "[=?]";
+			while ((line = br.readLine()) != null) {
+				String[] split = line.split(Separater);
+				String aadhar = split[Constant.ZERO];
+				if (aadhar.equals(Constant.ADHAARNO)) {
+					aadharNo = split[Constant.ONE];
+				}
+			}
+			return aadharNo;
 		} else {
 			System.out.println("AdharNumber Invalid ! Try again.");
 		}
-		return null;
+		return aadharNo;
 	}
+
 }

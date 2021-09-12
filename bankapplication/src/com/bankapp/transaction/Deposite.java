@@ -29,7 +29,7 @@ public class Deposite {
 		System.out.println(Constant.ACCOUNT_NUMBER + " : " + bd.getAccountNumber());
 		System.out.println(Messages.MessagesCode(Constant.ALBAL) + bd.getBalance());
 		System.out.println("Transaction successful");
-		new WriteFile().writeIntoFile(bd.getAccountNumber(),bd.getBalance(),bd.getPin());
+		new WriteFile().writeIntoFile(bd.getAccountNumber(), bd.getBalance(), bd.getPin(), bd.getAadharNumber());
 	}
 
 }

@@ -1,5 +1,6 @@
 package com.bankapp.main;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import com.bankapp.onboard.account.AccountOpen;
@@ -21,7 +22,11 @@ public class Main {
 
 		switch (option) {
 		case 1:
-			new AccountOpen();
+			try {
+				new AccountOpen().createAccountFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 			break;
 
 		case 2:
