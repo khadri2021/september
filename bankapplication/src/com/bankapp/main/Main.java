@@ -23,14 +23,16 @@ public class Main {
 		switch (option) {
 		case 1:
 			try {
-				new AccountOpen().createAccountFile();
+				AccountOpen accountOpen =new AccountOpen();
+				accountOpen.createAccountFile();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 			break;
 
 		case 2:
-			new Input().inputValues();
+			Input input = new  Input();
+			input.inputValues();
 			break;
 
 		default:

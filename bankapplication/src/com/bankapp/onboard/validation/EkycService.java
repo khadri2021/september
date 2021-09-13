@@ -21,7 +21,7 @@ public class EkycService {
 		sc = new Scanner(System.in);
 		System.out.println("Enter AdharNumber");
 		String aadharNumber = sc.next();
-
+        new File(EkycConstants.EKYC_PATH).mkdir();
 		File f = new File(EkycConstants.EKYC_PATH + aadharNumber + Constant.extenstion);
 		if (f.exists()) {
 

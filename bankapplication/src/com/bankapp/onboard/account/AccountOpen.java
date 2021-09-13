@@ -19,8 +19,10 @@ public class AccountOpen {
 
 		String aadhar = readerkyc;
 		String accountNumber = getAccountNumber();
+		File dir = new File(Constant.filepath);
 		File f = new File(Constant.filepath + accountNumber + Constant.extenstion);
-
+         dir.mkdir();
+       
 		if (!f.exists()) {
 			f.createNewFile();
 			String pin = accountNumber.substring(5, 9);
@@ -35,7 +37,9 @@ public class AccountOpen {
 			bufferedWriter.write(Constant.BALANCE + "=" + minimBalance + "\n");
 			bufferedWriter.write(Constant.ADHAARNO + "=" + aadhar + "\n");
 			bufferedWriter.close();
+
 			System.out.println("Sucessfully add balance to your account");
+
 		} else {
 			AccountOpen accountOpen = new AccountOpen();
 			accountOpen.createAccountFile();
