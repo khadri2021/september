@@ -15,11 +15,12 @@ public class CustomerMinimumBalance {
 		if (Minbalance >= MIN_BALANCE) {
 			return Minbalance;
 		} else {
-			System.out.println("please enter required ammount");
-			sc = new Scanner(System.in);
-			int minimumBalance = sc.nextInt();
-			return minimumBalance;
+			System.out.println("please Try Again");
+			CustomerMinimumBalance balance = new CustomerMinimumBalance();
+			balance.customerMinimumBalance();
+			
 		}
+		return 0;
 
 	}
 }

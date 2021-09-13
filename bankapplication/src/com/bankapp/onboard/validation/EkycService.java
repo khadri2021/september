@@ -36,9 +36,11 @@ public class EkycService {
 					aadharNo = split[Constant.ONE];
 				}
 			}
+			br.close();
 			return aadharNo;
 		} else {
 			System.out.println("AdharNumber Invalid ! Try again.");
+			EkycService.checkE_kyc();
 		}
 		return aadharNo;
 	}

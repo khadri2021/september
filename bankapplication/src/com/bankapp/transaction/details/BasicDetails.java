@@ -10,7 +10,16 @@ public class BasicDetails {
 	private String balance;
 	private String pin;
 	private String aadharNumber;
-	
+
+	private int pinCount;
+
+	public int getPinCount() {
+		return pinCount;
+	}
+
+	public void setPinCount(int pinCount) {
+		this.pinCount = pinCount;
+	}
 
 	public String getAadharNumber() {
 		return aadharNumber;
