@@ -11,14 +11,13 @@ public class BasicDetails {
 	private String pin;
 	private String aadharNumber;
 
-	private int pinCount;
 
-	public int getPinCount() {
-		return pinCount;
-	}
+	
 
-	public void setPinCount(int pinCount) {
-		this.pinCount = pinCount;
+	@Override
+	public String toString() {
+		return "BasicDetails [accountNumber=" + accountNumber + ", balance=" + balance + ", pin=" + pin
+				+ ", aadharNumber=" + aadharNumber + "]";
 	}
 
 	public String getAadharNumber() {

@@ -14,6 +14,7 @@ import com.bankapp.transaction.constant.Constant;
  *
  */
 public class AccountOpen {
+	private BufferedWriter bufferedWriter;
 	public void createAccountFile() throws IOException {
 		String readerkyc = EkycService.checkE_kyc();
 
@@ -30,7 +31,7 @@ public class AccountOpen {
 			CustomerMinimumBalance cmb = new CustomerMinimumBalance();
 			int minimBalance = cmb.customerMinimumBalance();
 
-			BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f, true));
+			 bufferedWriter = new BufferedWriter(new FileWriter(f, true));
 
 			bufferedWriter.write(Constant.ACCOUNT_NUMBER + "=" + accountNumber + "\n");
 			bufferedWriter.write(Constant.PIN + "=" + pin + "\n");

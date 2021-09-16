@@ -10,6 +10,9 @@ import com.bankapp.ekyc.aadhar.AadharGeneration;
 import com.bankapp.ekyc.constants.EkycConstants;
 
 public class EkycMain {
+	private static Scanner sc;
+	private static PrintWriter printwriter;
+
 	public static void main(String[] args) throws IOException {
 		System.out.println("######## Ekyc Registration ###########");
 		StringBuilder adhaarNumber = AadharGeneration.getAdhaarNumber();
@@ -23,8 +26,8 @@ public class EkycMain {
 	}
 
 	public static void EkycGeneration(File f) throws FileNotFoundException {
-		Scanner sc = new Scanner(System.in);
-		PrintWriter printwriter = new PrintWriter(f);
+		sc = new Scanner(System.in);
+		printwriter = new PrintWriter(f);
 		System.out.println("enter your name=");
 		String name = sc.next();
 		printwriter.write("Name = " + name + "\n");

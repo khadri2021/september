@@ -22,5 +22,6 @@ public class Constant {
 	public static final String DEPTMSG = "DEPTMSG";
 	public static final String RERROR = "RERROR";
 	public static final String ADHAARNO  = "ADHAARNO";
+	public static final String SEPARATER  = "[=?]";
 	public static final int ARRAYLENGTH = 20;
 }
