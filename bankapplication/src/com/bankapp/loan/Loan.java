@@ -15,7 +15,7 @@ public class Loan {
 
 	private static Scanner scanner;
 
-	public static void main(String[] args) {
+	public static void main() {
 
 		scanner = new Scanner(System.in);
 

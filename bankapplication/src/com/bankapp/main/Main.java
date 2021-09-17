@@ -37,7 +37,7 @@ public class Main {
 			break;
 
 		case 3:
-			Loan.main(null);
+			Loan.main();
 			break;
 		default:
 			break;
