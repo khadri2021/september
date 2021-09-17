@@ -3,6 +3,7 @@ package com.bankapp.main;
 import java.io.IOException;
 import java.util.Scanner;
 
+import com.bankapp.loan.Loan;
 import com.bankapp.onboard.account.AccountOpen;
 import com.bankapp.transaction.input.Input;
 
@@ -17,7 +18,7 @@ public class Main {
 	public static void main(String[] args) {
 		sc = new Scanner(System.in);
 		System.out.println("Welcome TO Khadiri Bank");
-		System.out.println("1 New User\n2 Existing User");
+		System.out.println("1 New User\n2 Existing User\n3 Loan");
 		int option = sc.nextInt();
 
 		switch (option) {
@@ -35,6 +36,9 @@ public class Main {
 			input.inputValues();
 			break;
 
+		case 3:
+			Loan.main(null);
+			break;
 		default:
 			break;
 		}
