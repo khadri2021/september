@@ -15,7 +15,7 @@ public class AccountVerify {
 	private static Scanner scanner;
 
 	public static void accountVerify() throws IOException {
-		Loan loan = new Loan();
+	
 		scanner = new Scanner(System.in);
 
 		System.out.println("Enter Your Account Number Number");
@@ -36,7 +36,8 @@ public class AccountVerify {
 				arrayList.add(line);
 
 			}
-			loan.loanProcess(arrayList);
+			Loan loan = new Loan();
+			loan.loanProcess(arrayList,accountNumber);
 			bufferedReader.close();
 		} else {
 			System.out.println("Please Open new Account");

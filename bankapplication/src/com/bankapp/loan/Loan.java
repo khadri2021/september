@@ -38,9 +38,8 @@ public class Loan {
 
 	}
 
-	public void loanProcess(ArrayList arrayList) {
+	public void loanProcess(ArrayList arrayList, String accountNumber) {
 		Object[] array = arrayList.toArray();
-		String accountNumber = ((String) array[0]).split(Constant.SEPARATER)[1];
 		String balance = ((String) array[2]).split(Constant.SEPARATER)[1];
 		int finalBalance = Integer.parseInt(balance);
 		System.out.println("Enter Loan Amount");
