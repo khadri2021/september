@@ -13,8 +13,8 @@ public class AadharGeneration {
 		String[] arr = String.valueOf(numbGen()).split("(?<=\\G.{4})");
 
 		for (int i = 0; i < arr.length; i++) {
-
-			builder.append(arr[i] + " ");
+ 
+			builder.append(arr[i] + "-");
 
 		}
 		return builder;
