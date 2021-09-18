@@ -14,7 +14,7 @@ public class AadharGeneration {
 
 		for (int i = 0; i < arr.length; i++) {
  
-			builder.append(arr[i] + "-");
+			builder.append(arr[i] + " ");
 
 		}
 		return builder;
