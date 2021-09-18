@@ -5,11 +5,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import com.bankapp.ekyc.constants.EkycConstants;
+import com.bankapp.constants.EkycConstants;
 import com.bankapp.loan.accountverifi.AccountVerify;
 import com.bankapp.loan.writetofile.UpdateBalance;
 import com.bankapp.transaction.constant.Constant;
-import com.bankapp.transaction.details.BasicDetails;
 
 public class Loan {
 

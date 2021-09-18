@@ -5,8 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
+import com.bankapp.constants.EkycConstants;
 import com.bankapp.ekyc.aadhar.AadharGeneration;
-import com.bankapp.ekyc.constants.EkycConstants;
 import com.bankapp.ekyc.io.FileUserInput;
 import com.bankapp.ekyc.io.GenerateEkycFile;
 import com.bankapp.ekyc.pojo.EkycRegrestration;

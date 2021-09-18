@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
-import com.bankapp.ekyc.constants.EkycConstants;
+import com.bankapp.constants.EkycConstants;
 import com.bankapp.transaction.constant.Constant;
 
 /**
